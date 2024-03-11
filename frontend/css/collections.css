@@ -1,0 +1,119 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.collections-menu-line {
+    border-top: 0.1px solid #858585;
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    width: 93%;
+}
+
+.collections-title {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 300;
+    color: rgb(41, 41, 41);
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.grid {
+    display: grid;
+    gap: 70px;
+    margin: 0 60px 30px 60px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Default to 1 column, adjust minmax() for desired min column width */
+  }
+
+  .grid img {
+    width: 100%;  /* Make image width responsive to the column size */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+  }
+
+  @media (max-width: 599px) { /* Tablets and above */
+    .grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 column */
+      margin: 0 0 30px 0;
+    }
+  }
+
+    @media (min-width: 600px) { /* For tablets and small screens */
+    .grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      margin: 0 30px 30px 30px;
+    }
+  }
+
+  @media (min-width: 900px) { /* For desktops and larger screens */
+    .grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+ }
+
+  @media (min-width: 1024px) { /* Desktops and above */
+    .grid {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    }
+  }
+
+/* Image Viewer */
+
+#imageViewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+#viewerImage {
+    max-width: 100%;
+    height: 95%;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#imageInfo {
+    position: absolute;
+    bottom: 30px;
+    background: rgba(0, 0, 0, 0.99);
+    color: white;
+    padding: 10px;
+}
+
+#prev, #next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    color: white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#prev { left: 20px; }
+#next { right: 20px; }
+
+#close {
+    color:rgb(227, 227, 227);
+    font-size: 35px;
+}
