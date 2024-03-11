@@ -1,50 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sarah Spector - Paintings for Power, Beauty, and Transformation</title>
-    <link rel="stylesheet" href="/frontend/css/styles.css">
+    <link rel="stylesheet" href="/frontend/css/styles.css">    <link rel="canonical" href="https://sarahspector.com/" />
+    <meta property="og:title" content="Sarah Spector: [Your Tagline Here]" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sarahspector.com/" />
+    <meta property="og:image" content="[Link to an image showcasing Sarah Spector or her work]" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sarah Spector: [Your Tagline Here]" />
+    <meta name="twitter:description" content="[Brief description about Sarah Spector or her offerings]" />
+    <meta name="twitter:image" content="[Link to an image optimized for Twitter sharing]" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Sarah Spector" />
+    <meta name="description" content="[A detailed description of Sarah Spector's website content, services, or mission]">
+    <meta name="title" content="Sarah Spector: [Your Tagline Here]">
+    <meta name="keywords" content="[Relevant keywords related to Sarah Spector's content, services, and themes]">
+    <meta property="og:description" content="[A brief Open Graph description of the site or Sarah's mission]">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Sarah Spector",
+      "image": "[Link to an image of Sarah Spector or her logo]",
+      "@id": "https://sarahspector.com/",
+      "url": "https://sarahspector.com/",
+      "telephone": "[Sarah Spector's Contact Number]",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[Street Address]",
+        "addressLocality": "[City]",
+        "postalCode": "[Postal Code]",
+        "addressCountry": "[Country]"
+      },
+      "sameAs" : [ "[Social Media URL 1]", "[Social Media URL 2]", ... ] // List of Sarah's social media profiles
+    }
+    </script>
 </head>
 <body>
+    <div id="mobile-nav-container">
+        <ul class="mobile-nav">
+            <li><a class="menu-item" href="/">COLLECTIONS</a></li>
+            <li><a class="menu-item" href="#shop">SHOP</a></li>
+            <li><a class="menu-item" href="#about">ABOUT</a></li>
+            <li><a class="menu-item" href="#instagram">INSTAGRAM</a></li>
+        </ul>  
+    </div> 
     <header>
         <nav class="main-nav">
-            <!-- This will be shown on larger screens -->
-            <ul class="nav-links">
-                <li><a href="#collections">Collections</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#instagram">Instagram</a></li>
-            </ul>
             <!-- This will be shown on smaller screens -->
-            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-            <ul class="mobile-nav">
-                <li><a href="#collections">Collections</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#instagram">Instagram</a></li>
-            </ul>
+            <div class="menu-line"></div>
+            <div class="menu-toggle" onclick="toggleMenu()">MENU</div>         
         </nav>
-        <h1>Sarah Spector</h1>
-        <p class="tagline">Paintings for power, beauty, and transformation</p>
+        <h1 id="title">SARAH SPECTOR</h1>
+        <p class="tagline">paintings for power, beauty, and transformation</p>
+
+        <ul class="nav-links">
+            <li><a class="nav-link" href="#collections">COLLECTIONS</a></li>
+            <li><a class="nav-link" href="#shop">SHOP</a></li>
+            <li><a class="nav-link" href="#about">ABOUT</a></li>
+            <li><a class="nav-link" href="#instagram">INSTAGRAM</a></li>
+        </ul>
+
     </header>
     
     <main>
         <!-- Section for each category of paintings -->
-        <section id="abstractions">
+<!--         <section id="abstractions">
             <h2>Abstractions</h2>
             <img src="abstraction.jpg" alt="Abstraction painting">
         </section>
         <section id="portraiture">
             <h2>Portraiture</h2>
             <img src="portraiture.jpg" alt="Portraiture painting">
-        </section>
+        </section> -->
         <!-- Add more sections for each category -->
     </main>
-    
+
     <footer>
-        <p>&copy;2022 Sarah Spector, all rights reserved</p>
-        <p>site design by sevmedia</p>
+        <div id="footer-menu-line"></div>
+        <p id="copyright">&copy;2022 Sarah Spector, all rights reserved • sarahrealart@gmail.com • site design by <a taget="_blank" rel="noopener" href="https://sevmedia.com/">sevmedia</a> and <a target="_blank" rel="noopener" href="https://keans-portfolio.vercel.app/">kean</a>
+        </p>
     </footer>
     
     <script src="/frontend/js/script.js"></script>
