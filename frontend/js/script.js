@@ -15,11 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if (isMenuOpen) {
             header.style.marginTop = "-165px";
             isMenuOpen = false;
+            mobileNav.style.zIndex = "-1";
             document.body.classList.remove('show-menu');
         } else {
             header.style.marginTop = "0px";
             isMenuOpen = true;
             document.body.classList.add('show-menu');
+            mobileNav.style.zIndex = "1";
         }
     });
 

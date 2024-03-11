@@ -1,0 +1,72 @@
+#about-columns {
+margin: 50px 40px 20px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* This will make the page split into two equal columns */
+  gap: 0px; /* This will add some space between the columns */
+}
+
+#left-column {
+    margin-left: 70px;
+    width: 82%;
+}
+
+#left-column img {
+    width:100%;
+    height: auto;
+    padding: 0 60px 30px 0;
+}
+
+#right-column {
+    margin-right: 70px;
+    margin-left: 70px;
+}
+
+#about-header, #education-header, #exhibitions-header {
+    font-size: 28px;
+    font-weight: 300;
+    color: rgb(60, 60, 60);
+    margin-bottom: 15px;
+}
+
+#about-header {
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+#education-header {
+    margin-top: 20px;
+    font-size: 23px;
+}
+
+.about-text {
+    font-size: 14px;
+    letter-spacing: normal;
+    line-height: 1.9;
+    color: grey;
+}
+
+.about-text li {
+    padding-left: 40px;
+    list-style-position: inside;
+    text-indent: -19px;
+}
+
+.about {
+    width: 90%;
+}
+
+.exhibitions li {
+    line-height: 2.3;
+}
+
+
+
+@media (max-width: 768px) {
+    #about-columns {
+        grid-template-columns: 1fr;
+        margin: 50px 0px 20px 0px;
+    }
+    #left-column img {
+        padding: 0 0 30px 0;
+    }
+}
