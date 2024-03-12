@@ -51,15 +51,15 @@ body {
 
 
 .mobile-nav a {
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: 4.5px;
     cursor: pointer;
-    color: rgb(104, 104, 104);
+    color: rgb(142, 142, 142);
     font-weight: 300;
 }
 
 .mobile-nav a:hover {
-    color: rgb(25, 25, 25);
+    color: rgb(99, 99, 99);
 }
 
 .menu-item:active {
@@ -90,6 +90,10 @@ header {
     font-weight: 700;
 }
 
+#title:hover {
+    color: rgb(62, 62, 62);
+    cursor: pointer;
+}
 
 .main-nav .nav-links {
     display: none;
@@ -98,14 +102,15 @@ header {
 
 .menu-toggle {
     display: none;
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: 4.5px;
     cursor: pointer;
-    color: grey;
+    color: rgb(141, 141, 141);
+    font-weight: 300;
 }
 
 .menu-toggle:hover {
-    color: black;
+    color: rgb(104, 104, 104);
 }
 
 .tagline {
@@ -136,9 +141,10 @@ header {
     color: rgb(25, 25, 25);
 }
 
-.nav-links a:active {
-    color: rgb(25, 25, 25);
+.nav-links a.active {
+    color: rgb(25, 25, 25); /* Black color for the active link */
 }
+
 
 @media (min-width: 768px) {
     header {
@@ -262,7 +268,7 @@ footer {
     letter-spacing: 1.5px;
     color: grey;
     gap: 10px;
-    margin-bottom: 140px;
+    margin-bottom: 40px;
 }
 
 footer a {
@@ -283,6 +289,28 @@ footer a {
 #footer-menu-line {
     border-top: 0.1px solid #858585;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     width: 80%;
+}
+
+#instagram-image-container {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+}
+
+#instagram-image {
+    height: 20px;
+    width: 20px;
+    transition: transform 0.15s ease;
+}
+
+#instagram-image:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
