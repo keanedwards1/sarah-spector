@@ -34,7 +34,7 @@ main {
 .grid {
     display: grid;
     gap: 70px;
-    margin: 0 60px 30px 60px;
+    margin: 0 70px 30px 70px;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Default to 1 column, adjust minmax() for desired min column width */
   }
 
@@ -54,7 +54,7 @@ main {
     @media (min-width: 600px) { /* For tablets and small screens */
     .grid {
       grid-template-columns: repeat(2, 1fr); /* 2 columns */
-      margin: 0 30px 30px 30px;
+      margin: 0 50px 30px 50px;
     }
   }
 
@@ -103,6 +103,7 @@ main {
 }
 
 #imageInfo {
+  display: none;
     position: absolute;
     bottom: 30px;
     background: rgb(0, 0, 0);
@@ -137,4 +138,55 @@ main {
 #close {
     color:rgb(227, 227, 227);
     font-size: 35px;
+}
+
+.navigation {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 90px;
+  padding-right: 90px;
+  margin-top: 80px;
+  font-weight: 300;
+  font-size: 14px;
+  color: darkgray;
+  /* Add your additional styles for the navigation section here */
+}
+
+#navigation2 {
+  margin-top: 0px;
+}
+
+.navigation #backslash:hover {
+  color: grey;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: grey;
+}
+
+.navigation a:hover {
+  color: black;
+}
+
+.navigation a:active {
+  color: black;
+}
+
+.back-to-work {
+  color: black;
+  margin-right: 1px;
+}
+
+.prev-for-collections {
+  margin-left: auto;
+  white-space: nowrap;
+  margin-right: -3px;
+}
+
+.next-for-collections {
+  margin-left: -3px;
+  white-space: nowrap;
 }

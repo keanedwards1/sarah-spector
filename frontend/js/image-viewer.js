@@ -26,14 +26,19 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0; // Keep track of the current image
 
     // Function to update viewer content
-    function updateViewer(index) {
-
-        
-        const img = images[index];
-        viewerImage.src = img.src;
-        imageInfo.textContent = `${img.getAttribute('data-title')}`; /* ${img.getAttribute('data-description')} */
-        currentIndex = index;
+// Function to update viewer content
+function updateViewer(index) {
+    if (index < 0 || index >= images.length) {
+        console.error('Invalid image index');
+        return; // Early return to avoid accessing invalid index
     }
+    
+    const img = images[index];
+    viewerImage.src = img.src;
+    // Safely update imageInfo textContent, handling potential null attributes
+/*     imageInfo.textContent = img.getAttribute('data-title') || 'No title'; */ // Fallback to 'No title' if attribute is null
+    currentIndex = index;
+}
 
     // Open viewer on image click
     images.forEach((img, index) => {
@@ -58,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navigate to the next image
     next.addEventListener('click', () => {
         let newIndex = currentIndex + 1;
-        if (newIndex >= images.length) newIndex = 0; // Loop to the start if at the end
+        if (newIndex >= images.length - 1) newIndex = 0; // Loop to the start if at the end
         updateViewer(newIndex);
     });
 

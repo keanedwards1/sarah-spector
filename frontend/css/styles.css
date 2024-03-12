@@ -18,6 +18,8 @@ a:link {
 body {
     font-family: 'raleway', sans-serif;
     letter-spacing: 2px;
+    visibility: hidden;
+    opacity: 0;
 }
 
 #mobile-nav-container {
@@ -29,6 +31,8 @@ body {
     height: 165px;
     cursor: pointer;
 }
+
+
 
 .mobile-nav {
     list-style-type: none;

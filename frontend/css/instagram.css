@@ -33,13 +33,17 @@
     .grid {
       grid-template-columns: repeat(1, 1fr); /* 1 column */
       margin: 0 0 120px 0;
+      width: calc(100% - 20px); /* Adjust based on your margin; assumes 60px margin on each side */
+
     }
   }
 
     @media (min-width: 600px) { /* For tablets and small screens */
     .grid {
       grid-template-columns: repeat(2, 1fr); /* 2 columns */
-      margin: 0 30px 120px 30px;
+      margin: 0 0px 120px 0px;
+      width: calc(100% - 60px); /* Adjust based on your margin; assumes 60px margin on each side */
+
     }
   }
 
@@ -52,5 +56,6 @@
   @media (min-width: 1024px) { /* Desktops and above */
     .grid {
       grid-template-columns: repeat(4, 1fr); /* 4 columns */
+      width: calc(100% - 140px); /* Adjust based on your margin; assumes 60px margin on each side */
     }
   }
