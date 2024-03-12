@@ -5,6 +5,15 @@ main {
     justify-content: center;
 }
 
+#imageViewer img,
+#imageViewer #prev,
+#imageViewer #next {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Non-prefixed version, currently supported by Chrome, Opera and Safari, and Edge */
+}
+
 .collections-menu-line {
     border-top: 0.1px solid #858585;
     display: block;
@@ -80,7 +89,10 @@ main {
 #viewerImage {
     max-width: 100%;
     max-height: 95%;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
 }
+
 
 #close {
     position: absolute;
@@ -93,21 +105,30 @@ main {
 #imageInfo {
     position: absolute;
     bottom: 30px;
-    background: rgba(0, 0, 0, 0.99);
+    background: rgb(0, 0, 0);
     color: white;
     padding: 10px;
 }
 
 #prev, #next {
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
     cursor: pointer;
     position: absolute;
     top: 50%;
     font-size: 24px;
+    font-weight: 100;
     color: white;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+#prev:hover, #next:hover {
+    opacity: 1;
+    pointer-events: auto; /* Enable mouse events on hover */
 }
 
 #prev { left: 20px; }

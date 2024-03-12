@@ -27,10 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to update viewer content
     function updateViewer(index) {
+
+        
         const img = images[index];
         viewerImage.src = img.src;
-/*         imageInfo.textContent = `${img.getAttribute('data-title')} - ${img.getAttribute('data-description')}`;
- */        currentIndex = index;
+        imageInfo.textContent = `${img.getAttribute('data-title')}`; /* ${img.getAttribute('data-description')} */
+        currentIndex = index;
     }
 
     // Open viewer on image click
@@ -88,4 +90,33 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    let fadeTimeout; // To keep track of the timeout
+
+viewer.addEventListener('mousemove', function(event) {
+    // Reset the fade timeout
+    clearTimeout(fadeTimeout);
+
+    const clickX = event.clientX; // Get the X coordinate of the mouse
+    const thirdWidth = window.innerWidth / 3; // Divide screen into thirds for more intuitive interaction
+
+    // Show the buttons
+    prev.style.opacity = (clickX < thirdWidth) ? '1' : '0';
+    next.style.opacity = (clickX > thirdWidth * 2) ? '1' : '0';
+
+    // Reactivate pointer events to allow clicking
+    if (prev.style.opacity === '1' || next.style.opacity === '1') {
+        prev.style.pointerEvents = 'auto';
+        next.style.pointerEvents = 'auto';
+    }
+
+    // Set a timeout to fade the buttons after 2 seconds of inactivity
+    fadeTimeout = setTimeout(() => {
+        prev.style.opacity = '0';
+        next.style.opacity = '0';
+        prev.style.pointerEvents = 'none'; // Disable pointer events after fade
+        next.style.pointerEvents = 'none'; // Disable pointer events after fade
+    }, 1000); // 2 seconds
+});
+
 });
